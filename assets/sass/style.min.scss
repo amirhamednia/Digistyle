@@ -1,0 +1,2744 @@
+@use"layout";
+@use"desktop";
+@use"slider";
+
+:root {
+    --black: #000;
+    --white: #fff;
+    --base-gray: #e9e9e9;
+    --bg-gray: #f5f5f5;
+}
+
+body {
+    background-color: var(--white) !important;
+
+    a:active {
+        background-color: transparent !important;
+    }
+}
+
+header {
+
+    /* desktop header */
+    .d-header {
+        .row {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            right: 0;
+
+            .enter {
+                .section-1 {
+                    .card-container {
+                        display: none;
+                        position: absolute;
+                        margin-top: 0.1rem;
+                        z-index: 999;
+                        transform: translate(0.5rem, 0.5rem);
+
+                        .card {
+                            width: 24rem;
+                            border: none;
+                            box-shadow: 0 0 5px 1px var(--base-gray);
+
+                            .card-header {
+                                background-color: transparent;
+                                border: none;
+
+                                .card-img-top {
+                                    width: 70px;
+                                    height: 70px;
+                                }
+                            }
+
+                            .card-body {
+                                .card-title {
+                                    font-size: 1rem;
+                                    font-weight: 600;
+                                }
+
+                                .card-text {
+                                    font-size: 0.8rem;
+                                    color: #7b7b7b;
+                                }
+                            }
+
+                            .card-footer {
+                                background-color: transparent;
+                                border: none;
+
+                                .btn {
+                                    font-size: 0.75rem;
+                                    color: #41c1c6;
+                                }
+
+                                .btn:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .section-1:hover {
+                    .card-container {
+                        display: block;
+                    }
+                }
+
+                .section-2 {
+                    .enter-text {
+                        color: var(--black);
+                        text-decoration: none;
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                        display: flex;
+                        align-items: center !important;
+                    }
+
+                    .btn-c {
+                        font-size: 0.75rem;
+                        padding: 1px 6px 2px !important;
+                        transform: translate(2rem, 2rem);
+                        display: none;
+                        position: absolute;
+                    }
+
+                    .enter-text:hover {
+                        .btn-c {
+                            display: block !important;
+                        }
+                    }
+
+                    .section-1:hover {
+                        .card-container {
+                            display: block !important;
+                        }
+                    }
+                }
+            }
+
+            .logo {
+                border-bottom: 1px solid #000;
+
+                .digiStyle-logo {
+                    filter: invert(100%);
+                }
+            }
+
+            .search {
+                .search-icon {
+                    transform: translate(-1.5rem, 0);
+                    color: #424242;
+                }
+
+                .input-search {
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 1px solid var(--black);
+                    padding-right: 1.75rem;
+                }
+
+                .input-search:focus-visible {
+                    outline: 0;
+                }
+
+                .input-search::placeholder {
+                    font-size: 0.8rem;
+                    color: #555555;
+                }
+            }
+
+            .nav-container {
+                .navbar {
+                    .navbar-nav {
+                        .nav-link-description {
+                            color: var(--black) !important;
+                            font-size: 0.8rem;
+                            font-weight: 400;
+                            padding: 0.5rem 1rem;
+                            text-decoration: none;
+                            cursor: pointer;
+                        }
+
+                        .nav-link {
+                            padding: 0 !important;
+                        }
+
+                        .nav-link:hover {
+                            .nav-link-description {
+                                font-weight: 700;
+                            }
+                        }
+
+                        .red-color {
+                            .nav-link-description {
+                                color: #ef394e !important;
+                            }
+                        }
+
+                        .first-nav-link:hover {
+                            .women-categories {
+                                display: block !important;
+                                background-color: var(--white);
+                                transform: translate(20px, 0);
+                                box-shadow: 0 0 5px 1px var(--base-gray);
+
+                                .women-categories-container {
+                                    border-bottom: 1px solid #464646;
+
+                                    .img-fluid {
+                                        width: 25px;
+                                        height: 25px;
+                                    }
+
+                                    .women-dress:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .dress-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(11.55rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.75rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 1rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .women-bag:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .bag-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(18.25rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.3rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 1rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+
+                                            .image-container {
+                                                img {
+                                                    height: 9rem;
+                                                    transition: 0.3s;
+                                                }
+
+                                                img:hover {
+                                                    filter: brightness(80%);
+                                                    transition: 0.3s;
+                                                }
+
+                                                .see-all-brands {
+                                                    text-decoration: none;
+                                                    color: var(--black);
+                                                    transform: translate(-6rem, -2rem);
+                                                    font-weight: 600;
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .women-shoes:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .shoes-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(24.66rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.3rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 1rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+
+                                            .image-container {
+                                                img {
+                                                    height: 9rem;
+                                                    transition: 0.3s;
+                                                }
+
+                                                img:hover {
+                                                    filter: brightness(80%);
+                                                    transition: 0.3s;
+                                                }
+
+                                                .see-all-brands {
+                                                    text-decoration: none;
+                                                    color: var(--black);
+                                                    transform: translate(-6rem, -2rem);
+                                                    font-weight: 600;
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .women-accessory:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .accessory-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(31.37rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.75rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 1rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+
+                                            .image-container {
+                                                img {
+                                                    // height: 9rem;
+                                                    transition: 0.3s;
+                                                }
+
+                                                img:hover {
+                                                    filter: brightness(80%);
+                                                    transition: 0.3s;
+                                                }
+
+                                                .see-all-brands {
+                                                    text-decoration: none;
+                                                    color: var(--black);
+                                                    transform: translate(0, -1rem);
+                                                    font-weight: 600;
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .women-sport:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .sport-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(39.94rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.75rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 1rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+
+                                            .image-container {
+                                                img {
+                                                    height: 9rem;
+                                                    transition: 0.3s;
+                                                }
+
+                                                img:hover {
+                                                    filter: brightness(80%);
+                                                    transition: 0.3s;
+                                                }
+
+                                                .see-all-brands {
+                                                    text-decoration: none;
+                                                    color: var(--black);
+                                                    transform: translate(-7rem, -2rem);
+                                                    font-weight: 600;
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+
+                        .second-nav-link:hover {
+                            .men-categories {
+                                display: block !important;
+                                background-color: var(--white);
+                                transform: translate(75px, 0);
+                                box-shadow: 0 0 5px 1px var(--base-gray);
+
+                                .men-categories-container {
+                                    border-bottom: 1px solid #464646;
+
+                                    .img-fluid {
+                                        width: 25px;
+                                        height: 25px;
+                                    }
+
+                                    .men-dress:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .dress-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(11.55rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.75rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 1rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+
+                                            .image-container {
+                                                img {
+                                                    height: 9rem;
+                                                    transition: 0.3s;
+                                                }
+
+                                                img:hover {
+                                                    filter: brightness(80%);
+                                                    transition: 0.3s;
+                                                }
+
+                                                .see-all-brands {
+                                                    text-decoration: none;
+                                                    color: var(--black);
+                                                    transform: translate(-5rem, -2rem);
+                                                    font-weight: 600;
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .men-bag:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .bag-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(18.25rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.3rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 1rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+
+                                            .image-container {
+                                                img {
+                                                    height: 9rem;
+                                                    transition: 0.3s;
+                                                }
+
+                                                img:hover {
+                                                    filter: brightness(80%);
+                                                    transition: 0.3s;
+                                                }
+
+                                                .see-all-brands {
+                                                    text-decoration: none;
+                                                    color: var(--black);
+                                                    transform: translate(-6rem, -2rem);
+                                                    font-weight: 600;
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .men-shoes:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .shoes-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(24.66rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.3rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 1rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+
+                                            .image-container {
+                                                img {
+                                                    height: 9rem;
+                                                    transition: 0.3s;
+                                                }
+
+                                                img:hover {
+                                                    filter: brightness(80%);
+                                                    transition: 0.3s;
+                                                }
+
+                                                .see-all-brands {
+                                                    text-decoration: none;
+                                                    color: var(--black);
+                                                    transform: translate(-6rem, -2rem);
+                                                    font-weight: 600;
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .men-accessory:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .accessory-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(31.37rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.75rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 1rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+
+                                            .image-container {
+                                                img {
+                                                    // height: 9rem;
+                                                    transition: 0.3s;
+                                                }
+
+                                                img:hover {
+                                                    filter: brightness(80%);
+                                                    transition: 0.3s;
+                                                }
+
+                                                .see-all-brands {
+                                                    text-decoration: none;
+                                                    color: var(--black);
+                                                    transform: translate(0, -1rem);
+                                                    font-weight: 600;
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .men-sport:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .sport-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(39.94rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.75rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 1rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+
+                                            .image-container {
+                                                img {
+                                                    height: 9rem;
+                                                    transition: 0.3s;
+                                                }
+
+                                                img:hover {
+                                                    filter: brightness(80%);
+                                                    transition: 0.3s;
+                                                }
+
+                                                .see-all-brands {
+                                                    text-decoration: none;
+                                                    color: var(--black);
+                                                    transform: translate(-7rem, -2rem);
+                                                    font-weight: 600;
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+
+                        .third-nav-link:hover {
+                            .kid-categories {
+                                display: block !important;
+                                background-color: var(--white);
+                                transform: translate(139px, 0);
+                                box-shadow: 0 0 5px 1px var(--base-gray);
+
+                                .kid-categories-container {
+                                    border-bottom: 1px solid #464646;
+
+                                    .img-fluid {
+                                        width: 25px;
+                                        height: 25px;
+                                    }
+
+                                    .kid-dress:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .dress-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(18.35rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.75rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 1rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+
+                                            .image-container {
+                                                img {
+                                                    // height: 9rem;
+                                                    transition: 0.3s;
+                                                }
+
+                                                img:hover {
+                                                    filter: brightness(80%);
+                                                    transition: 0.3s;
+                                                }
+
+                                                .see-all-brands {
+                                                    text-decoration: none;
+                                                    color: var(--black);
+                                                    transform: translate(0, -1rem);
+                                                    font-weight: 600;
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .kid-shoes:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .shoes-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(25rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.75rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 1rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+
+                                            .image-container {
+                                                img {
+                                                    // height: 9rem;
+                                                    transition: 0.3s;
+                                                }
+
+                                                img:hover {
+                                                    filter: brightness(80%);
+                                                    transition: 0.3s;
+                                                }
+
+                                                .see-all-brands {
+                                                    text-decoration: none;
+                                                    color: var(--black);
+                                                    transform: translate(0, -1rem);
+                                                    font-weight: 600;
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .kid-accessory:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .accessory-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(31.75rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.75rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 1rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+
+                                            .image-container {
+                                                img {
+                                                    // height: 9rem;
+                                                    transition: 0.3s;
+                                                }
+
+                                                img:hover {
+                                                    filter: brightness(80%);
+                                                    transition: 0.3s;
+                                                }
+
+                                                .see-all-brands {
+                                                    text-decoration: none;
+                                                    color: var(--black);
+                                                    transform: translate(0, -1rem);
+                                                    font-weight: 600;
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+
+                        .forth-nav-link:hover {
+                            .beauty-health-categories {
+                                display: block !important;
+                                background-color: var(--white);
+                                transform: translate(203px, 0);
+                                box-shadow: 0 0 5px 1px var(--base-gray);
+
+                                .beauty-health-categories-container {
+                                    border-bottom: 1px solid #464646;
+
+                                    .img-fluid {
+                                        width: 25px;
+                                        height: 25px;
+                                    }
+
+                                    .item {
+                                        font-size: 0.75rem !important;
+                                    }
+
+                                    .beauty-health-perfume:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .perfume-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(1.16rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.75rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 0.9rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+
+                                            .image-container {
+                                                img {
+                                                    // height: 9rem;
+                                                    transition: 0.3s;
+                                                }
+
+                                                img:hover {
+                                                    filter: brightness(80%);
+                                                    transition: 0.3s;
+                                                }
+
+                                                .see-all-brands {
+                                                    text-decoration: none;
+                                                    color: var(--black);
+                                                    transform: translate(0, -1rem);
+                                                    font-weight: 600;
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .beauty-health-makeup:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .makeup-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(9.54rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.75rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 1rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+
+                                            .image-container {
+                                                img {
+                                                    // height: 9rem;
+                                                    transition: 0.3s;
+                                                }
+
+                                                img:hover {
+                                                    filter: brightness(80%);
+                                                    transition: 0.3s;
+                                                }
+
+                                                .see-all-brands {
+                                                    text-decoration: none;
+                                                    color: var(--black);
+                                                    transform: translate(0, -1rem);
+                                                    font-weight: 600;
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .beauty-health-skincare:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .skincare-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(18.1rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.75rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 1rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+
+                                            .image-container {
+                                                img {
+                                                    // height: 9rem;
+                                                    transition: 0.3s;
+                                                }
+
+                                                img:hover {
+                                                    filter: brightness(80%);
+                                                    transition: 0.3s;
+                                                }
+
+                                                .see-all-brands {
+                                                    text-decoration: none;
+                                                    color: var(--black);
+                                                    transform: translate(0, -1rem);
+                                                    font-weight: 600;
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .beauty-health-hair:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .hair-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(27.05rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.75rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 1rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+
+                                            .image-container {
+                                                img {
+                                                    // height: 9rem;
+                                                    transition: 0.3s;
+                                                }
+
+                                                img:hover {
+                                                    filter: brightness(80%);
+                                                    transition: 0.3s;
+                                                }
+
+                                                .see-all-brands {
+                                                    text-decoration: none;
+                                                    color: var(--black);
+                                                    transform: translate(0, -1rem);
+                                                    font-weight: 600;
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .beauty-health-clean:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .clean-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(37.35rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.75rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 1rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+
+                                            .image-container {
+                                                img {
+                                                    // height: 9rem;
+                                                    transition: 0.3s;
+                                                }
+
+                                                img:hover {
+                                                    filter: brightness(80%);
+                                                    transition: 0.3s;
+                                                }
+
+                                                .see-all-brands {
+                                                    text-decoration: none;
+                                                    color: var(--black);
+                                                    transform: translate(0, -1rem);
+                                                    font-weight: 600;
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .beauty-health-electronic:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .electronic-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(49.85rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.75rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 1rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+
+                                            .image-container {
+                                                img {
+                                                    // height: 9rem;
+                                                    transition: 0.3s;
+                                                }
+
+                                                img:hover {
+                                                    filter: brightness(80%);
+                                                    transition: 0.3s;
+                                                }
+
+                                                .see-all-brands {
+                                                    text-decoration: none;
+                                                    color: var(--black);
+                                                    transform: translate(0, -1rem);
+                                                    font-weight: 600;
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+
+                        .fifth-nav-link:hover {
+                            .sport-vacation-categories {
+                                display: block !important;
+                                background-color: var(--white);
+                                transform: translate(319px, 0);
+                                box-shadow: 0 0 5px 1px var(--base-gray);
+
+                                .sport-vacation-categories-container {
+                                    border-bottom: 1px solid #464646;
+
+                                    .img-fluid {
+                                        width: 25px;
+                                        height: 25px;
+                                    }
+
+                                    .item {
+                                        font-size: 1rem !important;
+                                    }
+
+                                    .sport-vacation-dress:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .dress-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(10.4rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.75rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 1rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+
+                                            .image-container {
+                                                img {
+                                                    // height: 9rem;
+                                                    transition: 0.3s;
+                                                }
+
+                                                img:hover {
+                                                    filter: brightness(80%);
+                                                    transition: 0.3s;
+                                                }
+
+                                                .see-all-brands {
+                                                    text-decoration: none;
+                                                    color: var(--black);
+                                                    transform: translate(0, -1rem);
+                                                    font-weight: 600;
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .sport-vacation-shoes:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .shoes-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(17.35rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.75rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 1rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+
+                                            .image-container {
+                                                img {
+                                                    // height: 9rem;
+                                                    transition: 0.3s;
+                                                }
+
+                                                img:hover {
+                                                    filter: brightness(80%);
+                                                    transition: 0.3s;
+                                                }
+
+                                                .see-all-brands {
+                                                    text-decoration: none;
+                                                    color: var(--black);
+                                                    transform: translate(0, -1rem);
+                                                    font-weight: 600;
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .sport-vacation-bag:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .bag-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(24.4rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.75rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 1rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+
+                                            .image-container {
+                                                img {
+                                                    // height: 9rem;
+                                                    transition: 0.3s;
+                                                }
+
+                                                img:hover {
+                                                    filter: brightness(80%);
+                                                    transition: 0.3s;
+                                                }
+
+                                                .see-all-brands {
+                                                    text-decoration: none;
+                                                    color: var(--black);
+                                                    transform: translate(0, -1rem);
+                                                    font-weight: 600;
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .sport-vacation-equipment:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .equipment-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(31.28rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.75rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 1rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+
+                                            .image-container {
+                                                img {
+                                                    // height: 9rem;
+                                                    transition: 0.3s;
+                                                }
+
+                                                img:hover {
+                                                    filter: brightness(80%);
+                                                    transition: 0.3s;
+                                                }
+
+                                                .see-all-brands {
+                                                    text-decoration: none;
+                                                    color: var(--black);
+                                                    transform: translate(0, -1rem);
+                                                    font-weight: 600;
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .sport-vacation-camp:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .camp-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(38.15rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.75rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 1rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+
+                                            .image-container {
+                                                img {
+                                                    // height: 9rem;
+                                                    transition: 0.3s;
+                                                }
+
+                                                img:hover {
+                                                    filter: brightness(80%);
+                                                    transition: 0.3s;
+                                                }
+
+                                                .see-all-brands {
+                                                    text-decoration: none;
+                                                    color: var(--black);
+                                                    transform: translate(0, -1rem);
+                                                    font-weight: 600;
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+
+                        .ninth-nav-link:hover {
+                            .brand-categories {
+                                display: block !important;
+                                background-color: var(--white);
+                                transform: translate(685px, 0);
+                                box-shadow: 0 0 5px 1px var(--base-gray);
+
+                                .brand-categories-container {
+                                    border-bottom: 1px solid #464646;
+
+                                    .img-fluid {
+                                        width: 25px;
+                                        height: 25px;
+                                    }
+
+                                    .item {
+                                        font-size: 1rem !important;
+                                    }
+
+                                    .brand-name:hover {
+                                        .item {
+                                            color: #0000ff;
+                                            font-weight: 600;
+                                            cursor: pointer;
+                                        }
+
+                                        .name-div {
+                                            background-color: var(--white);
+                                            height: 30rem;
+                                            transform: translate(26rem, 16.3rem);
+                                            display: flex !important;
+
+                                            ul {
+                                                list-style: none;
+
+                                                li {
+                                                    margin: 0.75rem 0;
+
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #313131;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    a:hover {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+
+                                                .red-color {
+                                                    a {
+                                                        color: #ff0000;
+                                                    }
+                                                }
+
+                                                .bold {
+                                                    font-weight: 600;
+                                                }
+
+                                                .thick {
+                                                    font-size: 1rem;
+                                                    font-weight: 700;
+                                                    color: var(--black);
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+
+                                                .see-all-brands {
+                                                    text-decoration: none;
+                                                    color: var(--black);
+                                                    transform: translate(0, -1rem);
+                                                    font-weight: 600;
+
+                                                    .left {
+                                                        transform: translate(0, 2px);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    /* mobile header */
+    .m-header {
+        .row {
+            width: 90%;
+
+            .menu {
+                .navbar {
+                    width: 70%;
+
+                    .navbar-toggler {
+                        border: none;
+                        box-shadow: none;
+                    }
+
+                    .offcanvas {
+                        width: 90%;
+                    }
+
+                    .login-btn {
+                        background-color: transparent;
+                        border: 1px solid var(--black);
+                    }
+
+                    .search-c {
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: 1px solid var(--black);
+                    }
+
+                    .search-c:focus-visible {
+                        // border: none;
+                        outline: none;
+                        box-shadow: none;
+                    }
+
+                    .search-icon {
+                        color: #6e6e6e;
+                        transform: translate(1.5rem, 0.4rem);
+                    }
+                }
+
+                .digi-icon {
+                    width: 28px;
+                    height: 28px;
+                }
+
+                .nav-item {
+                    .nav-link {
+                        color: var(--black);
+                        font-weight: 400;
+                    }
+                }
+
+                .padding-c {
+                    padding-right: 2.7rem;
+                }
+            }
+
+            .logo {
+                .mobile-logo {
+                    filter: invert(100%);
+                }
+            }
+
+        }
+
+        .bottom-search-mobile {
+            form {
+                .search {
+                    border: none;
+                    width: 90%;
+                    background-color: #e6e6e6;
+                    padding-right: 3rem;
+                    padding-left: 1rem;
+                    transform: translate(7px, 0);
+
+                }
+
+                .search:focus-visible {
+                    outline: none;
+                }
+
+                .search-icon {
+                    transform: translate(-2rem, 0.7rem);
+                    color: #727272;
+                }
+            }
+        }
+    }
+    
+}
+
+main {
+
+    .mobile-swiper {
+        .w-90 {
+            width: 90% !important;
+        }
+    }
+
+    .categories {
+        .image-container {
+            .img-fluid {
+                width: 50px;
+                height: 50px;
+                border-radius: 30rem;
+            }
+
+            .title {
+                font-size: 0.75rem;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .bg-gray {
+        background-color: var(--bg-gray);
+        height: 40rem;
+
+        .buttons {
+
+            .border-bottom-black {
+                border-bottom: 3px solid #000;
+            }
+
+            .btns {
+                cursor: pointer;
+
+                .male-images {
+                    right: 0;
+                    bottom: 0;
+
+                    img {
+                        height: 250px;
+                    }
+                }
+
+                .female-images {
+                    display: none;
+                    right: 0;
+                    bottom: 0;
+
+                    img {
+                        height: 250px;
+                    }
+                }
+
+                .child-images {
+                    display: none;
+                    right: 0;
+                    bottom: 0;
+
+                    img {
+                        height: 250px;
+                    }
+                }
+
+                .beauty-images {
+                    display: none;
+                    right: 0;
+                    bottom: 0;
+
+                    img {
+                        height: 250px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .popular-products {
+        position: relative;
+
+        .top-text {
+            a {
+                text-decoration: none;
+                color: var(--black);
+            }
+        }
+
+        .bg-grey {
+            background-color: #e6e6e6;
+            width: 100%;
+            height: 200px;
+            transform: translate(0, -1rem);
+            z-index: -1;
+            position: absolute;
+        }
+
+        .row {
+            .brand-name {
+                .img-fluid {
+                    width: 64px;
+                    height: 64px;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: var(--black);
+
+                    .icon {
+                        transform: translate(0, 2px);
+                    }
+                }
+            }
+
+            .card-container {
+                .card {
+                    box-shadow: 0 .5rem 1rem #00000026;
+
+                    .card-header {
+                        border: none;
+                        background-color: transparent;
+
+                        .img-fluid {
+                            transition: 0.3s;
+                        }
+                    }
+
+                    .card-body {
+                        background-color: transparent;
+                        border: none;
+
+                        a {
+                            text-decoration: none;
+                            color: var(--black);
+                        }
+                    }
+
+                    .card-footer {
+                        background-color: transparent;
+                        border: none;
+                        font-weight: 600;
+
+                        .deleted {
+                            font-weight: normal !important;
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .popular-products-2 {
+        position: relative;
+
+        .top-text {
+            a {
+                text-decoration: none;
+                color: var(--black);
+            }
+        }
+
+        .bg-grey {
+            background-color: #e6e6e6;
+            width: 100%;
+            height: 200px;
+            transform: translate(0, -1rem);
+            z-index: -1;
+            position: absolute;
+        }
+
+        .row {
+            .brand-name {
+                .img-fluid {
+                    width: 64px;
+                    height: 64px;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: var(--black);
+
+                    .icon {
+                        transform: translate(0, 2px);
+                    }
+                }
+            }
+
+            .card-container {
+                .card {
+                    box-shadow: 0 .5rem 1rem #00000026;
+
+                    .card-header {
+                        border: none;
+                        background-color: transparent;
+
+                        .img-fluid {
+                            transition: 0.3s;
+                        }
+                    }
+
+                    .card-body {
+                        background-color: transparent;
+                        border: none;
+
+                        a {
+                            text-decoration: none;
+                            color: var(--black);
+                        }
+                    }
+
+                    .card-footer {
+                        background-color: transparent;
+                        border: none;
+                        font-weight: 600;
+
+                        .deleted {
+                            font-weight: normal !important;
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .iranian-designers {
+        .top-text {
+            a {
+                text-decoration: none;
+                color: var(--black);
+            }
+        }
+
+        .container-div {
+            .text {
+                .brand-names {
+                    a {
+                        color: #9d9d9d;
+                        text-decoration: none;
+                        font-size: 1.2rem;
+                    }
+                }
+
+                .bold {
+                    a {
+                        color: var(--black);
+                        font-weight: 600;
+                        font-size: 1.5rem !important;
+                    }
+                }
+            }
+
+            .images {}
+        }
+    }
+
+    .blog {
+        .card-container {
+            padding-top: 1rem;
+
+            .card {
+                background-color: transparent;
+                border: none;
+
+                .img-fluid {
+                    border-radius: 0;
+                }
+
+                .card-body {
+                    padding: 1rem 0;
+
+                    .card-title {
+                        font-size: 1rem;
+                    }
+
+                    .card-text {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom-categories {
+        .ul-container {
+            ul {
+                list-style: none;
+
+                li {
+                    padding: 0.3rem 0;
+
+                    a {
+                        text-decoration: none;
+                        color: var(--black);
+                        font-weight: 400;
+
+                    }
+
+                    a:hover {
+                        border-bottom: 1px solid var(--black);
+                        padding-bottom: 3px;
+                    }
+                }
+
+                .title {
+                    margin-bottom: 0.5rem;
+
+                    a {
+                        font-weight: 700;
+                        text-decoration: none !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .options {
+        .card-container {
+            .card {
+                background-color: transparent;
+                border: none;
+
+                .card-header {
+                    background-color: transparent;
+                    border: none;
+
+                    img {
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+
+                .card-body {
+                    .card-title {
+                        color: #434343;
+                        font-size: clamp(0.8rem, 1.8vw, 2rem);
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    .row {
+        .logo {
+            .logo-image {
+                filter: invert(100%);
+                width: 120px;
+                height: 20px;
+            }
+        }
+
+        .list-container {
+            ul {
+                list-style: none;
+
+                .title {
+                    color: var(--black);
+                    font-weight: 600;
+                }
+
+                li {
+                    margin: 0.75rem 0;
+
+                    a {
+                        text-decoration: none;
+                        color: #81858B;
+                    }
+                }
+
+                li:hover {
+                    a {
+                        border-bottom: 1px solid #81858B;
+                        padding-bottom: 0.1rem;
+                    }
+                }
+            }
+        }
+
+        .support-contact {
+            .support {
+                .tel {
+                    text-decoration: none;
+                    color: var(--black);
+                    font-weight: 600;
+                }
+            }
+
+            .social-media {
+                a {
+                    text-decoration: none;
+
+                    .icon {
+                        color: #81858B;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
+            .text {
+                color: var(--black);
+                font-weight: 600;
+            }
+
+            form {
+                #email {
+                    color: var(--black);
+                    border-left: none;
+                    border: 1px solid #d9d9d9;
+                    padding: 0.5rem 0.5rem;
+                    width: 75%;
+                }
+
+                #email:focus-visible {
+                    outline: none;
+                }
+
+                #submit {
+                    border-right: none;
+                    transform: translate(5px, 0);
+                    background-color: #d9d9d9;
+                    border: 1px solid #d9d9d9;
+                    padding: 0.5rem 0;
+                    width: 22%;
+                }
+            }
+        }
+
+        .download-links {
+            .text {
+                a {
+                    text-decoration: none;
+                    color: var(--black);
+                    font-weight: 600;
+                }
+            }
+
+            .links {
+                a {
+                    .download {
+                        width: 135px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+
+        .trust {
+            .first-image {
+                width: 125px;
+                height: 115px;
+            }
+
+            .second-image {
+                width: 125px;
+                height: 115px;
+            }
+
+            .third-image {
+                width: 95px;
+                height: 115px;
+            }
+        }
+
+        .sub-footer {
+            p {
+                color: #81858B;
+                font-weight: 400;
+            }
+        }
+    }
+}

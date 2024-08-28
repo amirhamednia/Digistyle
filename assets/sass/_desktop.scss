@@ -1,0 +1,45 @@
+@media(min-width:768px){
+    .options{
+        .card{
+            .card-img-top{
+                width: 80px !important;
+                height: 80px !important;
+            }
+        }
+    }
+    
+    .popular-products,
+    .popular-products-2,
+    .iranian-designers{
+        .top-text{
+            h3{
+                text-align: start !important;
+            }
+            a{
+                text-align: end !important;
+            }
+        }
+    }
+
+    .blog{
+        .card-container:hover {
+            border: 1px solid var(--black) !important;
+        }
+    }
+
+    footer{
+        .links{
+            a{
+                text-align: end !important;
+            }
+        }
+        .sub-footer{
+            .rights{
+                text-align: start !important;
+            }
+            .copyright{
+                text-align: end !important;
+            }
+        }
+    }
+}
